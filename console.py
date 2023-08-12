@@ -169,10 +169,10 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) == 0:
                     full_command = "{} {}".format(command, class_name)
                 elif len(args) == 1:
-                    full_command = "{} {} {}".format(command, 
+                    full_command = "{} {} {}".format(command,
                                                      class_name, args[0])
                 elif len(args) == 3:
-                    full_command = "{} {} {} {} {}".format(command, class_name, 
+                    full_command = "{} {} {} {} {}".format(command, class_name,
                                                            args[0], args[1], args[2])
                 self.onecmd(full_command)
             else:
