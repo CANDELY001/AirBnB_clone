@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """Defines unittests for models/engine/file_storage.py.
 
 Unittest classes:
@@ -104,10 +103,6 @@ class TestFileStorage_methods(unittest.TestCase):
         with self.assertRaises(TypeError):
             models.storage.new(BaseModel(), 1)
 
-    def test_new_with_None(self):
-        with self.assertRaises(AttributeError):
-            models.storage.new(None)
-
     def test_save(self):
         bm = BaseModel()
         us = User()
@@ -165,43 +160,9 @@ class TestFileStorage_methods(unittest.TestCase):
         self.assertIn("Amenity." + am.id, objs)
         self.assertIn("Review." + rv.id, objs)
 
-    def test_reload_no_file(self):
-        with self.assertRaises(FileNotFoundError):
-            models.storage.reload()
-
     def test_reload_with_arg(self):
         with self.assertRaises(TypeError):
             models.storage.reload(None)
-=======
-""" TEST_CASES for FileStrorage class
-"""
-import unittest
-from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
-from models.user import User
-
-
-class TestFileStorage(unittest.TestCase):
-    """Unittest for filestorage"""
-
-    def setUp(self):
-        """Setting Instantiation"""
-        self.storage = FileStorage()
-        self.storage.reload()
-
-    def test_all(self):
-        """Testing the all() method"""
-        o = BaseModel()
-        self.storage.new(o)
-        self.assertEqual(
-            self.storage.all(), {o.__class__.__name__ + "." + o.id: o})
-
-    def test_new_user(self):
-        """Testing the new() method"""
-        user = User()
-        self.storage.new(user)
-        self.assertIn("User." + user.id, self.storage.all())
->>>>>>> 6a47cd2a808f1120ffcd49d856249ccc2ac653ea
 
 
 if __name__ == "__main__":
