@@ -169,14 +169,17 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) == 0:
                     full_command = "{} {}".format(command, class_name)
                 elif len(args) == 1:
-                    full_command = "{} {} {}".format(command, class_name, args[0])
+                    full_command = "{} {} {}".format(command, 
+                                                     class_name, args[0])
                 elif len(args) == 3:
-                    full_command = "{} {} {} {} {}".format(command, class_name, args[0], args[1], args[2])
+                    full_command = "{} {} {} {} {}".format(command, class_name, 
+                                                           args[0], args[1], args[2])
                 self.onecmd(full_command)
             else:
                 print("{}: does not exit".format(arg))
         else:
             return cmd.Cmd.default(self, arg)
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
