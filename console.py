@@ -5,7 +5,7 @@ import shlex
 from models import storage
 from models.base_model import BaseModel
 
-class HBNBCommand(cmd.Cmd):
+  class HBNBCommand(cmd.Cmd):
     """Cmd Interpreter
     Args:
         cmd (ob): object of the module cmd
