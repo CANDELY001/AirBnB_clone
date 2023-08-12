@@ -5,6 +5,7 @@ import shlex
 from models import storage
 from models.base_model import BaseModel
 
+
 class HBNBCommand(cmd.Cmd):
     """Cmd Interpreter
     Args:
@@ -59,7 +60,6 @@ class HBNBCommand(cmd.Cmd):
         key = args[0] + "." + args[1]
         self.del_instance(obj_dict, key)
 
-
     def do_all(self, arg):
         """Prints all string representation of all instances
         based on the class name"""
@@ -70,7 +70,6 @@ class HBNBCommand(cmd.Cmd):
             return
         else:
             self.print_all_instances_by_class(storage.all().values(), args[0])
-
 
     def do_update(self, arg):
         """Updates an instance based on the class name
@@ -88,7 +87,6 @@ class HBNBCommand(cmd.Cmd):
             key = args[0] + "." + args[1]
             obj_dict = storage.all()
             self.update_instance_attr(obj_dict, key, args[2], args[3])
-
 
     def update_instance_attr(self, obj_dict, key, attr_name, attr_value):
         """Updates an attribute of an instance"""
@@ -133,7 +131,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-
     def do_quit(self, line):
         """Quit Command to exit the program"""
         return True
@@ -146,7 +143,6 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Ensures that empty line + ENTER doesn't execute anything"""
         pass
-
 
     def do_count(self, arg):
         """Counts the number of instances of a specific class"""
@@ -165,7 +161,6 @@ class HBNBCommand(cmd.Cmd):
             "update": self.do_update,
         }
         match = re.search(r"\.(\w+)\((.*?)\)$", arg)
-
         if match is not None:
             class_name = arg[: match.start()]
             command = match.group(1)
@@ -174,14 +169,18 @@ class HBNBCommand(cmd.Cmd):
                 if len(args) == 0:
                     full_command = "{} {}".format(command, class_name)
                 elif len(args) == 1:
-                    full_command = "{} {} {}".format(command, class_name, args[0])
+                    full_command = "{} {} {}".format(command,
+                                                     class_name, args[0])
                 elif len(args) == 3:
-                    full_command = "{} {} {} {} {}".format(command, class_name, args[0], args[1], args[2])
+                    full_command = "{} {} {} {} {}".format(command,
+                                                           class_name, args[0],
+                                                           args[1], args[2])
                 self.onecmd(full_command)
             else:
                 print("{}: does not exit".format(arg))
         else:
             return cmd.Cmd.default(self, arg)
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()

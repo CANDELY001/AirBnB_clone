@@ -29,7 +29,8 @@ class BaseModel:
         Returns:
             str: [<class name>] (<self.id>) <self.__dict__>
         """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+                                     self.id, self.__dict__)
 
     def save(self):
         """saves the instance atttributes of the class"""
@@ -68,4 +69,3 @@ class BaseModel:
                 self.__dict__[key] = datetime.strptime(value, formatStr)
             else:
                 self.__dict__[key] = value
-
