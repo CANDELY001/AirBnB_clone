@@ -8,6 +8,7 @@ CLASSES = {
     "BaseModel": BaseModel,
 }
 
+
 class FileStorage:
     """serializes instances to a JSON file and deserializes
     JSON file to instances"""
@@ -65,4 +66,3 @@ class FileStorage:
         for k in objs:
             name = k.split(".")[0]
             FileStorage.__objects[k] = CLASSES[name](**objs[k])
-
