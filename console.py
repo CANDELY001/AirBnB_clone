@@ -173,7 +173,7 @@ class HBNBCommand(cmd.Cmd):
                                                      class_name, args[0])
                 elif len(args) == 3:
                     full_command = "{} {} {} {} {}".format(command,
-                                                           class_name, args[0], args[1], args[2])
+                                                    class_name, args[0], args[1], args[2])
                 self.onecmd(full_command)
             else:
                 print("{}: does not exit".format(arg))
