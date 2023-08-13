@@ -15,6 +15,12 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
     __ALLOWED_CLASSES = {
         "BaseModel": BaseModel,
+        "User": User,
+        "State": State,
+        "City": City,
+        "Amenity": Amenity,
+        "Place": Place,
+        "Review": Review,
     }
 
     def arg_checker(self, args, id_needed=True):
