@@ -6,6 +6,12 @@ from models.base_model import BaseModel
 
 CLASSES = {
     "BaseModel": BaseModel,
+    "User": User,
+    "State": State,
+    "City": City,
+    "Amenity": Amenity,
+    "Place": Place,
+    "Review": Review,
 }
 
 
