@@ -3,17 +3,6 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
-<<<<<<< HEAD
-    display: flex;
-    align-items: center;
-}
-
-header .logo {
-    width: 142px;
-    height: 60px;
-    background: url("../images/logo.png") no-repeat center;
-    padding-left: 20px;
-=======
 }
 
 header .logo {
@@ -22,5 +11,4 @@ header .logo {
     height: 60px;
     background: url("../images/logo.png");
     margin-left: 20px;
->>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
 }

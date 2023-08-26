@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .filters{
+=======
+.filters {
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
     background-color: white;
     height: 70px;
     width: 100%;
@@ -7,7 +11,11 @@
     text-align: right;
 }
 
+<<<<<<< HEAD
 section.filters button{
+=======
+section.filters button {
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
     margin-top: 11px;
     margin-bottom: 11px;
     margin-right: 30px;
@@ -19,9 +27,17 @@ section.filters button{
     border: none;
     border-radius: 4px;
 }
+<<<<<<< HEAD
 section.filters button:hover {
     opacity: 0.9;
 }
+=======
+
+section.filters button:hover {
+    opacity: 0.9;
+}
+
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
 .locations{
     text-align: left;
     height: 100%;
@@ -36,6 +52,10 @@ section.filters button:hover {
     width: 25%;
     float: left;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
 .amenities h3, .locations h3{
     font-weight: 600;
     margin: 0px;
@@ -50,6 +70,10 @@ section.filters button:hover {
     font-size: 14px;
     padding-left: 30px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
 .popover{
     visibility: hidden;
     position: relative;
@@ -60,7 +84,13 @@ section.filters button:hover {
     padding-bottom: 10%;
     z-index: 1;
 }
+<<<<<<< HEAD
 .popover li h2{
+=======
+
+.popover li h2{
+    font-size: 16px;
+>>>>>>> 3a70eb6c563c2b5d7551d2229b96599b72c8cdca
     padding: 0;
     margin: 0;
 }
